@@ -40,6 +40,7 @@ export const addTask = createAsyncThunk<TaskType, { title: string, todolistId: s
             return handleAsyncServerNetworkError(err, thunkAPI, false)
         }
     })
+
 export const updateTask = createAsyncThunk('tasks/updateTask', async (param: { taskId: string, model: UpdateDomainTaskModelType, todolistId: string },
                                                                       thunkAPI) => {
     const state = thunkAPI.getState() as AppRootStateType
